@@ -1,0 +1,263 @@
+:root {
+    --bg: #0b0e14;
+    --surface: #131820;
+    --surface-hover: #1b222d;
+    --border: #263140;
+    --text-main: #f0f4f8;
+    --text-muted: #8b9ab0;
+    --c3: #10b981;
+    --c2: #38bdf8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    padding: 3rem 1.5rem;
+}
+
+.portfolio-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+nav span {
+    color: var(--c2);
+}
+
+.intro-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--c2), var(--accent-headlight));
+}
+
+.tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--c2);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.intro-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.intro-desc strong {
+    color: var(--text-main);
+}
+
+.section-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin: 3rem 0 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+}
+
+.skill-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.skill-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.tpb {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.tpb:hover {
+    border-color: var(--c3);
+}
+
+.project-main-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.scst {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--c3);
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.sds {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.1, 1, 0.1, 1), margin-top 0.4s;
+    background: #0f141d;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.tpb.opsc .sds {
+    max-height: 180px;
+    margin-top: 1rem;
+    padding: 1.25rem;
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.sds p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+
+
+.contact-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.contact-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: var(--bg);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    border-color: var(--text-muted);
+    background: var(--surface-hover);
+}
+
+.btn.primary {
+    background: #fff;
+    color: #0b0e14;
+    border: none;
+}
+
+.btn.primary:hover {
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4rem;
+    font-family: 'JetBrains Mono', monospace;
+}
